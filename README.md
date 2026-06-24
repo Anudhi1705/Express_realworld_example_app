@@ -1,74 +1,81 @@
-# ![Node/Express/Prisma Example App](project-logo.png)
+# Express RealWorld Example App
 
-[![Build Status](https://travis-ci.org/anishkny/node-express-realworld-example-app.svg?branch=master)](https://travis-ci.org/anishkny/node-express-realworld-example-app)
+A backend API application built using Node.js, Express.js, TypeScript, Prisma ORM, and PostgreSQL.
 
-> ### Example Node (Express + Prisma) codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) API spec.
+## Features
 
-<a href="https://thinkster.io/tutorials/node-json-api" target="_blank"><img width="454" src="https://raw.githubusercontent.com/gothinkster/realworld/master/media/learn-btn-hr.png" /></a>
+* User Authentication using JWT
+* User Registration and Login
+* Profile Management
+* Article Creation, Update and Deletion
+* Comment Management
+* Database Integration using Prisma ORM
+* RESTful API Architecture
+* Environment Variable Configuration
+* TypeScript Support
 
-## Getting Started
+## Tech Stack
 
-### Prerequisites
+* Node.js
+* Express.js
+* TypeScript
+* Prisma ORM
+* PostgreSQL
+* JWT Authentication
 
-Run the following command to install dependencies:
+## Installation
 
-```shell
+Clone the repository:
+
+```bash
+git clone https://github.com/Anudhi1705/Express_realworld_example_app.git
+```
+
+Install dependencies:
+
+```bash
 npm install
 ```
 
-### Environment variables
+## Environment Variables
 
-This project depends on some environment variables.
-If you are running this project locally, create a `.env` file at the root for these variables.
-Your host provider should included a feature to set them there directly to avoid exposing them.
+Create a `.env` file in the root directory and add:
 
-Here are the required ones:
-
-```
+```env
 DATABASE_URL=
 JWT_SECRET=
 NODE_ENV=production
 ```
 
-### Generate your Prisma client
+## Generate Prisma Client
 
-Run the following command to generate the Prisma Client which will include types based on your database schema:
-
-```shell
+```bash
 npx prisma generate
 ```
 
-### Apply any SQL migration script
+## Run Database Migrations
 
-Run the following command to create/update your database based on existing sql migration scripts:
-
-```shell
+```bash
 npx prisma migrate deploy
 ```
 
-### Run the project
+## Start the Application
 
-Run the following command to run the project:
-
-```shell
+```bash
 npx nx serve api
 ```
 
-### Seed the database
+## Project Structure
 
-The project includes a seed script to populate the database:
+* src/ - Application source code
+* prisma/ - Database schema and migrations
+* e2e/ - End-to-end tests
+* Dockerfile - Container configuration
 
-```shell
-npx prisma db seed
-```
+## Author
 
-## Deploy on a remote server
+Anudhi Mishra
 
-Run the following command to:
-- install dependencies
-- apply any new migration sql scripts
-- run the server
+## License
 
-```shell
-npm ci && npx prisma migrate deploy && node dist/api/main.js
-```
+This project is for educational and learning purposes.
